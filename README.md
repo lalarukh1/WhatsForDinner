@@ -6,8 +6,7 @@ to a free Recipes API provided by 'The Meal DB'. Recipe details along with the m
 icon on recipe cards. The video link for each recipe is also available. App uses jquery for smooth automatic scrolling to different 
 sections and back to the top.
 <h3> Technologies Used </h3>
-<p> The project was made for the purpose of getting a good understanding of bootstrap as a beginner and to get a better understanding of working 
-with Laravel and Vue.js. </p>
+<p> The project was made for the purpose of getting a good understanding of bootstrap as a beginner and to get a better understanding of working with Laravel and Vue.js. It also explores the use of sass and popper.js.</p>
 <h3> Some Screenshots </h3>
 
 ![first](https://user-images.githubusercontent.com/35193027/41783486-dbf3b6da-7634-11e8-8a61-a375f73d1bab.jpg)
