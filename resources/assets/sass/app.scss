@@ -15,5 +15,126 @@
 body {
   font: 100% 'Special Elite', cursive;
   background-color: $primary-color;
+
+  .header {
+    height:200px;
+    overflow:hidden;
+    border-bottom: thin solid;
+
+    img {
+      opacity: 0.9;
+    }
+    h1 {
+      font-family: 'Playball', cursive; position: absolute;
+      top: 10%;
+      left: 3%;
+      font-size: 64px;
+      color: white;
+    }
+  }
+
+  .category {
+    background-color: #d5bc9e;
+    color: #ffefa9;
+    opacity: 0.9;
+    background-image: url('/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 60%;
+  }
+  .meal {
+    background: #fffadd;
+    background-image: url('/2.jpg');
+    background-repeat: repeat-y;
+    background-size: 100%;
+
+    .mealValues {
+      background: #fe8127;
+      width: 20%;
+
+      .popperMain {
+        position: absolute;
+        color: white;
+        margin-left: -10px;
+        margin-top: -9px;
+        background: #92c24c;
+        box-shadow: 1px 2px grey;
+      }
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+  .recipe {
+    background: #ffefa9;
+    .recipeDetail {
+      background-image: url('/3.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .recipeValue {
+        font-family: 'Playball', cursive;
+      }
+
+      .recipeStyle {
+        opacity: 0.9;
+        background-color: #fe8127;
+        text-decoration: none;
+
+        .recipeVideo {
+          text-decoration: none;
+        }
+      }
+      .recipeIcon {
+        color: #ffefa9;
+
+        a {
+          font-size: 18px;
+        }
+      }
+      .methodRecipe {
+        opacity: 0.8;
+        line-height: 1.6;
+      }
+    }
+  }
+  .scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;height: 50px;
+    display: block;
+  }
 }
 
+@media (max-width: 992px) {
+  .mealValues {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    img {
+      height: 400px;
+    }
+    h1 {
+      font-size: 50px !important;
+    }
+  }
+  .mealValues {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .mealValues {
+    h4 {
+      display: none;
+    }
+  }
+}

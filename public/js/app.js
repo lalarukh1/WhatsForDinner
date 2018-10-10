@@ -54816,16 +54816,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -55786,67 +55776,43 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c(
-      "div",
-      {
-        staticClass: "category pb-5",
-        staticStyle: {
-          "background-color": "#d5bc9e",
-          color: "#ffefa9",
-          opacity: "0.9",
-          "background-image": "url('/2.jpg')",
-          "background-repeat": "no-repeat",
-          "background-size": "cover",
-          "background-position": "20% 60%"
+    _c("div", { staticClass: "category pb-5", attrs: { id: "category" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "d-flex flex-wrap h-auto w-100 pl-5 pr-5 pt-5 pb-5 mb-5 justify-content-center"
         },
-        attrs: { id: "category" }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "d-flex flex-wrap h-auto w-100 pl-5 pr-5 pt-5 pb-5 mb-5 justify-content-center"
-          },
-          _vm._l(_vm.categories.categories, function(value) {
-            return _c(
-              "div",
-              {
-                staticClass:
-                  "flex flex-wrap h-25 m-2 p-2 text-center text-truncate",
-                staticStyle: { width: "15%" }
-              },
-              [
-                _c("h2", [_vm._v(" " + _vm._s(value.strCategory))]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#meal" } }, [
-                  _c("img", {
-                    staticClass: "w-100",
-                    attrs: { src: value.strCategoryThumb, id: "cat" },
-                    on: {
-                      click: function($event) {
-                        _vm.updateCategory(value.strCategory)
-                      }
+        _vm._l(_vm.categories.categories, function(value) {
+          return _c(
+            "div",
+            { staticClass: "flex flex-wrap h-25 m-2 p-2 text-center" },
+            [
+              _c("h2", { staticClass: "text-truncate" }, [
+                _vm._v(" " + _vm._s(value.strCategory))
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#meal" } }, [
+                _c("img", {
+                  staticClass: "w-100",
+                  attrs: { src: value.strCategoryThumb, id: "cat" },
+                  on: {
+                    click: function($event) {
+                      _vm.updateCategory(value.strCategory)
                     }
-                  })
-                ])
-              ]
-            )
-          })
-        )
-      ]
-    ),
+                  }
+                })
+              ])
+            ]
+          )
+        })
+      )
+    ]),
     _vm._v(" "),
     _c(
       "div",
       {
         staticClass: "d-flex flex-wrap meal justify-content-center",
-        staticStyle: {
-          background: "#fffadd",
-          "background-image": "url('/2.jpg')",
-          "background-repeat": "repeat-y",
-          "background-size": "100%"
-        },
         attrs: { id: "meal" }
       },
       [
@@ -55864,10 +55830,7 @@ var render = function() {
         _vm._l(_vm.meals.meals, function(value, key) {
           return _c(
             "div",
-            {
-              staticClass: "d-flex flex-row h-25 pl-0 m-4 rounded",
-              staticStyle: { background: "#fe8127", width: "20%" }
-            },
+            { staticClass: "d-flex flex-row h-25 pl-0 m-4 rounded mealValues" },
             [
               _c(
                 "div",
@@ -55892,14 +55855,8 @@ var render = function() {
                   _c(
                     "popper",
                     {
-                      staticClass: "align-self-end rounded-circle p-2",
-                      staticStyle: {
-                        position: "absolute",
-                        color: "white",
-                        "margin-left": "-10px",
-                        "margin-top": "-9px",
-                        background: "#92c24c"
-                      },
+                      staticClass:
+                        "align-self-end rounded-circle p-2 popperMain",
                       attrs: { trigger: "hover", options: { placement: "top" } }
                     },
                     [
@@ -55908,7 +55865,8 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("a", {
-                        staticClass: "block fa fa-cutlery top p-2 text-white",
+                        staticClass:
+                          "block fa fa-cutlery top p-lg-2 p-md-1 text-white",
                         attrs: {
                           slot: "reference",
                           href: "#recipe",
@@ -55927,7 +55885,6 @@ var render = function() {
                   _c("div", { staticClass: "d-flex flex-column" }, [
                     _c("img", {
                       staticClass: "img-fluid w-auto",
-                      staticStyle: { opacity: "1" },
                       attrs: { src: value.strMealThumb }
                     })
                   ])
@@ -55945,19 +55902,14 @@ var render = function() {
       "div",
       {
         staticClass: "d-flex recipe justify-content-center",
-        staticStyle: { background: "#ffefa9" },
         attrs: { id: "recipe" }
       },
       [
         _c(
           "div",
           {
-            staticClass: "row w-100 h-100 pt-4 pb-4",
-            staticStyle: {
-              "background-image": "url('/3.jpg')",
-              "background-repeat": "no-repeat",
-              "background-size": "cover"
-            }
+            staticClass:
+              "row w-100 h-100 pt-4 pb-4 justify-content-center recipeDetail"
           },
           [
             _vm.showR
@@ -55975,8 +55927,8 @@ var render = function() {
               return _c(
                 "div",
                 {
-                  staticClass: "row w-100 justify-content-center text-white",
-                  staticStyle: { "font-family": "'Playball', cursive" }
+                  staticClass:
+                    "row w-100 justify-content-center text-white recipeValue"
                 },
                 [
                   _c(
@@ -55993,30 +55945,28 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col w-25 p-4 text-white justify-items-center" },
+              {
+                staticClass:
+                  "col-lg-2 col-md-4 p-4 text-white justify-items-center"
+              },
               _vm._l(_vm.recipe.meals, function(value) {
                 return _c("div", [
                   _c("img", {
-                    staticClass: "img-fluid w-100 h-100",
+                    staticClass: "img-fluid",
                     attrs: { src: value.strMealThumb }
                   }),
                   _vm._v(" "),
                   _c(
                     "div",
                     {
-                      staticClass: "btn w-100 h-25 mt-4 p-2 text-white",
-                      staticStyle: {
-                        opacity: "0.9",
-                        "background-color": "#fe8127",
-                        "text-decoration": "none"
-                      }
+                      staticClass:
+                        "btn w-100 h-25 mt-4 p-2 text-white recipeStyle"
                     },
                     [
                       _c(
                         "a",
                         {
-                          staticClass: "text-white",
-                          staticStyle: { "text-decoration": "none" },
+                          staticClass: "text-white recipeVideo",
                           attrs: { href: value.strYoutube }
                         },
                         [_vm._v("Watch Video")]
@@ -56031,38 +55981,28 @@ var render = function() {
                       _c(
                         "i",
                         {
-                          staticClass: "fa fa-lg fa-map-marker pl-2 pr-2 pb-2",
-                          staticStyle: { color: "#ffefa9" },
+                          staticClass:
+                            "fa fa-lg fa-map-marker pl-2 pr-2 pb-2 recipeIcon",
                           attrs: { "aria-hidden": "true" }
                         },
                         [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "text-white pl-2",
-                              staticStyle: { "font-size": "18px" }
-                            },
-                            [_vm._v(_vm._s(value.strArea))]
-                          )
+                          _c("a", { staticClass: "text-white pl-2" }, [
+                            _vm._v(_vm._s(value.strArea))
+                          ])
                         ]
                       ),
                       _vm._v(" "),
                       _c(
                         "i",
                         {
-                          staticClass: "fa fa-lg fa-tag pl-2 pr-2 pb-2",
-                          staticStyle: { color: "#ffefa9" },
+                          staticClass:
+                            "fa fa-lg fa-tag pl-2 pr-2 pb-2 recipeIcon",
                           attrs: { "aria-hidden": "true" }
                         },
                         [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "text-white pl-2",
-                              staticStyle: { "font-size": "16px" }
-                            },
-                            [_vm._v(_vm._s(value.strTags))]
-                          )
+                          _c("a", { staticClass: "text-white pl-2" }, [
+                            _vm._v(_vm._s(value.strTags))
+                          ])
                         ]
                       )
                     ]
@@ -56074,11 +56014,14 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "column w-25 bg-dark p-4 m-4 text-white",
+                staticClass:
+                  "col-lg-2 col-md-6 bg-dark py-4 m-4 text-white h-100",
                 staticStyle: { opacity: "0.8" }
               },
               [
-                _c("h3", { staticClass: "pb-2" }, [_vm._v("Ingredients")]),
+                _c("h3", { staticClass: "pb-2 pr-2 text-truncate" }, [
+                  _vm._v("Ingredients")
+                ]),
                 _vm._v(" "),
                 _vm._l(_vm.recipe.meals, function(value) {
                   return _c(
@@ -56274,8 +56217,8 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "column w-50 bg-dark p-4 m-4 text-white",
-                staticStyle: { opacity: "0.8" }
+                staticClass:
+                  "col-lg-6 col-md-10 bg-dark p-4 m-4 text-white methodRecipe"
               },
               [
                 _vm.recipe.meals
@@ -56287,8 +56230,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "d-flex flex-column justify-content-start text-justify",
-                      staticStyle: { "line-height": "1.6" }
+                        "d-flex flex-column justify-content-start text-justify"
                     },
                     [
                       _vm._v(
@@ -56321,16 +56263,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "d-flex justify-content-center align-items-center rounded-circle",
-          staticStyle: {
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            background: "rgba(0, 0, 0, 0.7)",
-            width: "50px",
-            height: "50px",
-            display: "block"
-          }
+            "d-flex justify-content-center align-items-center rounded-circle scrollTop"
         },
         [
           _c("a", { attrs: { href: "#category" } }, [

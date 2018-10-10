@@ -18,11 +18,9 @@
 
     </head>
     <body>
-    <div class="d-flex bg-light justify-content-center" style="height:200px; overflow:hidden; border-bottom: thin solid " id="top">
-        <img class="w-100 align-self-center" src="/6.jpg"
-             style="height: 900px; opacity: 0.9">
-        <h1 style="font-family: 'Playball', cursive; position: absolute; top: 10%; left: 3%; font-size: 64px; color: white;"
-            > What's For Dinner ? </h1>
+    <div class="d-flex bg-light justify-content-center header" id="top">
+        <img class="w-100 align-self-center" src="/6.jpg">
+        <h1> What's For Dinner ?</h1>
     </div>
     <div id="app">
     <recipes></recipes>
